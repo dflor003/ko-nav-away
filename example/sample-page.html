@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>NavAway Sample</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Sample</a>
+        </div>
+    </div>
+</nav>
+<section class="container">
+
+    <form action="">
+        <fieldset data-bind="navaway: isDirty">
+            <legend>
+                <h3>This is an example form
+                    <small>Click "Go away" to try navigating away. Is dirty = <strong data-bind="text: isDirty"></strong></small>
+                </h3>
+            </legend>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" class="form-control" placeholder="First Name" data-bind="textInput: firstName" />
+                </div>
+
+                <div class="form-group">
+                    <label for="middle-name">Middle Name:</label>
+                    <input type="text" id="middle-name" class="form-control" placeholder="Middle Name"  data-bind="textInput: middleName"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" class="form-control" placeholder="Last Name" data-bind="textInput: lastName"/>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" class="form-control" placeholder="Email Address" data-bind="value: email"/>
+                </div>
+
+                <div class="checkbox">
+                    <label for="send-welcome">
+                        <input type="checkbox" id="send-welcome" data-bind="checked: sendWelcomeEmail" />
+                        Send a welcome email?
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset data-bind="navaway: isDirty">
+            <legend>
+                <h3>Miscellaneous</h3>
+            </legend>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" class="form-control" placeholder="Some notes..." cols="30" rows="6" data-bind="value: notes">
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Favorite food:</label>
+
+                    <div class="radio">
+                        <label for="spaghetti">
+                            <input type="radio" id="spaghetti" name="foods" value="spaghetti" data-bind="checked: favoriteFood" /> Spaghetti
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="chinese">
+                            <input type="radio" id="chinese" name="foods" value="chinese" data-bind="checked: favoriteFood" /> Chinese
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="burrito">
+                            <input type="radio" id="burrito" name="foods" value="burritos" data-bind="checked: favoriteFood" /> Burritos
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-link">Cancel</button>
+        <a href="http://www.google.com" class="btn btn-danger pull-right">Go away!</a>
+    </form>
+
+</section>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="example.js"></script>
+<script type="text/javascript" src="../src/ko-nav-away.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        var model = new sample.PersonInfo();
+        ko.applyBindings(model);
+    });
+</script>
+</body>
+</html>

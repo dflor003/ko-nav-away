@@ -1,0 +1,16 @@
+{
+  "name": "prompt-on-nav-binding-handler",
+  "version": "0.0.1",
+  "authors": [
+    "DanilF <danil_flores@ultimatesoftware.com>"
+  ],
+  "description": "A binding handler that will prompt on inputs changing inside it if the value is different when you try to navigate away.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
