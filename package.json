@@ -1,0 +1,30 @@
+{
+  "name": "ko-nav-away",
+  "version": "0.0.1",
+  "description": "Knockout Navigate Away plugin",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "^0.13.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.2.3",
+    "karma-jasmine-jquery": "^0.1.1"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dflor003/ko-nav-away.git"
+  },
+  "author": "Danil Flores <dflor003@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dflor003/ko-nav-away/issues"
+  },
+  "homepage": "https://github.com/dflor003/ko-nav-away#readme"
+}

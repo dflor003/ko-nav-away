@@ -25,34 +25,42 @@
                 </h3>
             </legend>
 
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" class="form-control" placeholder="First Name" data-bind="textInput: firstName" />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" class="form-control" placeholder="First Name" data-bind="textInput: firstName" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="middle-name">Middle Name:</label>
+                        <input type="text" id="middle-name" class="form-control" placeholder="Middle Name"  data-bind="textInput: middleName"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" class="form-control" placeholder="Last Name" data-bind="textInput: lastName"/>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="middle-name">Middle Name:</label>
-                    <input type="text" id="middle-name" class="form-control" placeholder="Middle Name"  data-bind="textInput: middleName"/>
-                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="text" id="email" class="form-control" placeholder="Email Address" data-bind="value: email"/>
+                    </div>
 
-                <div class="form-group">
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" class="form-control" placeholder="Last Name" data-bind="textInput: lastName"/>
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="suffix">Suffix:</label>
+                        <select id="suffix" data-bind="value: suffix, options: sample.Suffixes, optionsText: 'desc', optionsCaption: 'None'">
+                        </select>
+                    </div>
 
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="text" id="email" class="form-control" placeholder="Email Address" data-bind="value: email"/>
-                </div>
-
-                <div class="checkbox">
-                    <label for="send-welcome">
-                        <input type="checkbox" id="send-welcome" data-bind="checked: sendWelcomeEmail" />
-                        Send a welcome email?
-                    </label>
+                    <div class="checkbox">
+                        <label for="send-welcome">
+                            <input type="checkbox" id="send-welcome" data-bind="checked: sendWelcomeEmail" />
+                            Send a welcome email?
+                        </label>
+                    </div>
                 </div>
             </div>
         </fieldset>
@@ -62,31 +70,57 @@
                 <h3>Miscellaneous</h3>
             </legend>
 
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="notes">Notes:</label>
-                    <textarea id="notes" class="form-control" placeholder="Some notes..." cols="30" rows="6" data-bind="value: notes">
-                    </textarea>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="notes">Notes:</label>
+                        <textarea id="notes" class="form-control" placeholder="Some notes..." cols="30" rows="6" data-bind="value: notes">
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Favorite food:</label>
+
+                        <div class="radio">
+                            <label for="spaghetti">
+                                <input type="radio" id="spaghetti" name="foods" value="spaghetti" data-bind="checked: favoriteFood" /> Spaghetti
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="chinese">
+                                <input type="radio" id="chinese" name="foods" value="chinese" data-bind="checked: favoriteFood" /> Chinese
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="burrito">
+                                <input type="radio" id="burrito" name="foods" value="burritos" data-bind="checked: favoriteFood" /> Burritos
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Favorite food:</label>
-
-                    <div class="radio">
-                        <label for="spaghetti">
-                            <input type="radio" id="spaghetti" name="foods" value="spaghetti" data-bind="checked: favoriteFood" /> Spaghetti
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Choose all that you would like to receive</label>
+                    <div class="checkbox">
+                        <label for="send-spam">
+                            <input type="checkbox" id="send-spam" data-bind="checked: itemsToSend, checkedValue: 'spam'"/>
+                            Receive the occasional spam email
                         </label>
                     </div>
-                    <div class="radio">
-                        <label for="chinese">
-                            <input type="radio" id="chinese" name="foods" value="chinese" data-bind="checked: favoriteFood" /> Chinese
+                    <div class="checkbox">
+                        <label for="send-newsletter">
+                            <input type="checkbox" id="send-newsletter" data-bind="checked: itemsToSend, checkedValue: 'newsletter'"/>
+                            Receive our monthly newsletter
                         </label>
                     </div>
-                    <div class="radio">
-                        <label for="burrito">
-                            <input type="radio" id="burrito" name="foods" value="burritos" data-bind="checked: favoriteFood" /> Burritos
+                    <div class="checkbox">
+                        <label for="send-discounts">
+                            <input type="checkbox" id="send-discounts" data-bind="checked: itemsToSend, checkedValue: 'discounts'"/>
+                            Receive discounts and deals
                         </label>
                     </div>
                 </div>
