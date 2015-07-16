@@ -15,7 +15,7 @@
     "karma-jasmine-jquery": "^0.1.1"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "node ./node_modules/karma/bin/karma start"
   },
   "repository": {
     "type": "git",
