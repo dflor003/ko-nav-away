@@ -2,16 +2,33 @@
   "name": "prompt-on-nav-binding-handler",
   "version": "0.0.1",
   "authors": [
-    "DanilF <danil_flores@ultimatesoftware.com>"
+    "Danil Flores <dflor003@gmail.com>"
   ],
-  "description": "A binding handler that will prompt on inputs changing inside it if the value is different when you try to navigate away.",
+  "description": "A binding handler that will prompt on inputs changing inside it if the value is different when you try to navigate away from the page.",
+  "main": [
+    "src/ko-nav-away.js"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "knockout",
+    "knockoutjs",
+    "binding",
+    "navigation",
+    "onbeforeunload"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "lib",
     "test",
-    "tests"
+    "tests",
+    "package.json",
+    "karma.conf.js",
+    ".bowerrc"
   ],
   "dependencies": {
     "knockoutjs": "~3.3.0"
