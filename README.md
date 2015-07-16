@@ -27,6 +27,7 @@ Run the following commands to set everything up:
 ```sh
 $ npm install               # Install node modules
 $ bower install             # Install client-side dependencies
+$ npm install -g jake       # Install jake globally for build tools
 $ npm install -g karma-cli  # (Optional) Install karma globally for testing
 ```
 
@@ -36,4 +37,10 @@ To startup karma and run all tests upon saving changes:
 $ npm test
 # Or if you installed karma globally
 $ karma start
+```
+
+Updating release:
+
+```sh
+$ jake build # Make sure you have jake installed globally
 ```

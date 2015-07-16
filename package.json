@@ -9,6 +9,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "jake-utils": "0.0.19",
     "karma": "^0.13.0",
     "karma-chrome-launcher": "^0.2.0",
     "karma-jasmine": "^0.2.3",
